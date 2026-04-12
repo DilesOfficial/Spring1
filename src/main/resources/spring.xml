@@ -5,4 +5,7 @@
 
     <bean id="alien" class="com.dilusha.Alien">
     </bean>
+
+    <bean id="lap" class="com.dilusha.Laptop">
+    </bean>
 </beans>
