@@ -6,7 +6,10 @@
 <!--    <bean id="alien" class="com.dilusha.Alien" scope="prototype">-->
 <!--    </bean>-->
 
-    <bean id="alien1" class="com.dilusha.Alien">
+    <bean id="alien1" class="com.dilusha.Alien" autowire="byType">
+
+        <property name="age" value="12"/>
+<!--        <property name="com" ref="com1"/>-->
 
 <!--        <constructor-arg type="com.dilusha.Laptop" ref="lap1"/>-->
 <!--        <constructor-arg type="int" value="30"/>-->
@@ -15,13 +18,15 @@
 <!--        <constructor-arg index="0" value="30"/>-->
 
 
-        <constructor-arg name="lap" ref="lap1"/>
-        <constructor-arg name="age" value="30"/>
+<!--        <constructor-arg name="lap" ref="lap1"/>-->
+<!--        <constructor-arg name="age" value="30"/>-->
 
 
-<!--        <property name="lap" ref="lap1"/>-->
     </bean>
 
-    <bean id="lap1" class="com.dilusha.Laptop">
+    <bean id="com1" class="com.dilusha.Laptop">
+    </bean>
+
+    <bean id="com2" class="com.dilusha.Desktop">
     </bean>
 </beans>
