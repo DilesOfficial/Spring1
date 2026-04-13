@@ -9,7 +9,11 @@
     <bean id="alien1" class="com.dilusha.Alien" autowire="byType">
 
         <property name="age" value="12"/>
-        <property name="com" ref="com2"/>
+<!--        Inner Bean-->
+        <property name="com">
+            <bean id="com1" class="com.dilusha.Laptop" primary="true">
+            </bean>
+        </property>
 
 <!--        <constructor-arg type="com.dilusha.Laptop" ref="lap1"/>-->
 <!--        <constructor-arg type="int" value="30"/>-->
@@ -24,8 +28,8 @@
 
     </bean>
 
-    <bean id="com1" class="com.dilusha.Laptop" primary="true">
-    </bean>
+<!--    <bean id="com1" class="com.dilusha.Laptop" primary="true">-->
+<!--    </bean>-->
 
     <bean id="com2" class="com.dilusha.Desktop" lazy-init="true">
     </bean>
