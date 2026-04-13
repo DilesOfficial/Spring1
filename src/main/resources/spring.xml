@@ -7,8 +7,19 @@
 <!--    </bean>-->
 
     <bean id="alien1" class="com.dilusha.Alien">
-        <property name="age" value="25"></property>
-        <property name="lap" ref="lap1"></property>
+
+<!--        <constructor-arg type="com.dilusha.Laptop" ref="lap1"/>-->
+<!--        <constructor-arg type="int" value="30"/>-->
+
+<!--        <constructor-arg index="1" ref="lap1"/>-->
+<!--        <constructor-arg index="0" value="30"/>-->
+
+
+        <constructor-arg name="lap" ref="lap1"/>
+        <constructor-arg name="age" value="30"/>
+
+
+<!--        <property name="lap" ref="lap1"/>-->
     </bean>
 
     <bean id="lap1" class="com.dilusha.Laptop">

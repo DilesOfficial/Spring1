@@ -1,12 +1,22 @@
 package com.dilusha;
 
+import java.beans.ConstructorProperties;
+
 public class Alien {
 
     private int age;
+    private int salary;
     private Laptop lap;
 
     public Alien() {
         System.out.println("Object Created");
+    }
+
+    @ConstructorProperties({"age", "lap"})
+    public Alien(int age, Laptop lap) {
+        System.out.println("Para Constructor Called");
+        this.age = age;
+        this.lap = lap;
     }
 
     public int getAge() {
