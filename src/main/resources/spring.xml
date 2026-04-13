@@ -27,6 +27,6 @@
     <bean id="com1" class="com.dilusha.Laptop" primary="true">
     </bean>
 
-    <bean id="com2" class="com.dilusha.Desktop">
+    <bean id="com2" class="com.dilusha.Desktop" lazy-init="true">
     </bean>
 </beans>
