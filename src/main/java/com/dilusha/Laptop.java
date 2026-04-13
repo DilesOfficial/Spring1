@@ -1,11 +1,12 @@
 package com.dilusha;
 
-public class Laptop {
-    public Laptop() {
-        System.out.println("Laptop Object Created");
-    }
+public class Laptop implements Computer {
+//    public Laptop() {
+//        System.out.println("Laptop Object Created");
+//    }
 
+    @Override
     public void compile() {
-        System.out.println("Compile");
+        System.out.println("Compile using Laptop");
     }
 }
