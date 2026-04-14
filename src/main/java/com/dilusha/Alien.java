@@ -9,6 +9,8 @@ import java.beans.ConstructorProperties;
 public class Alien {
 
     private int age;
+
+    @Autowired
     private Computer com;
 
     public Alien() {
