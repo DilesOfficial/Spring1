@@ -1,6 +1,7 @@
 package com.dilusha;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.beans.ConstructorProperties;
@@ -9,8 +10,6 @@ import java.beans.ConstructorProperties;
 public class Alien {
 
     private int age;
-
-    @Autowired
     private Computer com;
 
     public Alien() {
@@ -37,6 +36,8 @@ public class Alien {
         return com;
     }
 
+    @Autowired
+    @Qualifier("laptop")
     public void setCom(Computer com) {
         this.com = com;
     }
